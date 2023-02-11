@@ -11,5 +11,6 @@ body {
     margin: 0 auto;
     padding: 20px;
     background-color: white;
-    font-family: 'Lato';
+    font-family: 'Montserrat';
+    word-break: break-word;
 }
