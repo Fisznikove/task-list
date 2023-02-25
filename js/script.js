@@ -10,17 +10,29 @@
         render();
     }
 
+    const removeTask = (index) => {
+        tasks.splice(index, 1);
+        render();
+    }
+
     const render = () => {
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-        <li>
+        <li class="list__item${task.done ? "list__item--done" : ""}">
+        <button class="task__button js-done">✔</button>
         ${task.content}
+        <button class="task__button--remove js-remove">🗑</button>
         </li>
         `;
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
-
+        const removeButtons = document.querySelectorAll(".js-remove");
+        removeButtons.forEach((removeButtons, index) => {
+            removeButtons.addEventListener("click", () => {
+                removeTask(index);
+            })
+        });
     };
 
 
@@ -33,7 +45,7 @@
             return;
         }
         addNewTask(newTaskContent);
-      
+
     };
 
     const init = () => {

@@ -8,3 +8,17 @@
 .form__button:hover {
     background-color: hsl(180, 100%, 30%);
 }
+
+.task__button {
+    background-color:green;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.task__button--remove {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+}
