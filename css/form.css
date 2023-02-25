@@ -11,12 +11,7 @@
     border: 1px solid #ccc;
 }
 
-.form__button {
-    padding: 5px;
-    background-color: teal;
-    color: white;
-    border: none
-}
+
 
 @media (max-width: 767px) {
     .form {
