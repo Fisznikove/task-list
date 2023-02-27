@@ -1,7 +1,6 @@
 .section {
     background-color: #ccc;
     padding: 5px;
-   
 }
 
 .section__header {
@@ -16,5 +15,5 @@
 .section__list {
     background-color: white;
     margin: 0;
-    border-bottom: 1px solid #ccc;
+    list-style: none;
 }

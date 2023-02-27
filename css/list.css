@@ -1,8 +1,14 @@
-.list__item--done {
-    text-decoration: line-through;
-  
-}
-
-.list__item {
+ .list__item {
+    display: grid;
+    grid-template-columns: auto  1fr auto;
     list-style: none;
+    border-bottom: 1px solid #ccc;
+ }
+
+ .task__list {
+    list-style: none;
+   
+ }
+.task__list--done {
+ text-decoration: line-through;
 }
