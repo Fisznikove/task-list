@@ -15,24 +15,43 @@
         render();
     }
 
-    const render = () => {
-        let htmlString = "";
-        for (const task of tasks) {
-            htmlString += `
-        <li class="list__item${task.done ? "list__item--done" : ""}">
-        <button class="task__button js-done">✔</button>
-        ${task.content}
-        <button class="task__button--remove js-remove">🗑</button>
-        </li>
-        `;
-        }
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+    const toggleTaskDone = (taskIndex) => {
+        tasks[taskIndex].done = !tasks[taskIndex].done;
+        render();
+    }
+
+
+    const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
         removeButtons.forEach((removeButtons, index) => {
             removeButtons.addEventListener("click", () => {
                 removeTask(index);
             })
         });
+    }
+
+    const bindDoneEvents = () => {
+        const toggleDoneButtons = document.querySelectorAll(".js-done");
+        toggleDoneButtons.forEach((toggleDoneButton, index) => {
+            toggleDoneButton.addEventListener("click", () => {
+                toggleTaskDone(index);
+            })
+        });
+    }
+    const render = () => {
+        let htmlString = "";
+        for (const task of tasks) {
+            htmlString += `
+        <li class="list__item>
+        <button class="task__button js-done">${task.done ? "✔" : ""}</button>
+        <span class="task__list ${task.done ? "task__list--done" : ""}">${task.content}</span>
+        <button class="task__button--remove js-remove">🗑</button>
+        </li>
+        `;
+        }
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+        bindEvents();
+        bindDoneEvents();
     };
 
 
@@ -45,7 +64,6 @@
             return;
         }
         addNewTask(newTaskContent);
-
     };
 
     const init = () => {
