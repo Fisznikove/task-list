@@ -1,5 +1,4 @@
 {
-
     const tasks = [];
 
     const addNewTask = (newTaskContent) => {
@@ -19,7 +18,6 @@
         tasks[taskIndex].done = !tasks[taskIndex].done;
         render();
     }
-
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -42,7 +40,7 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-        <li class="list__item>
+        <li class="list__item">
         <button class="task__button js-done">${task.done ? "✔" : ""}</button>
         <span class="task__list ${task.done ? "task__list--done" : ""}">${task.content}</span>
         <button class="task__button--remove js-remove">🗑</button>
@@ -54,16 +52,17 @@
         bindDoneEvents();
     };
 
-
     const onFormSubmit = (event) => {
         event.preventDefault();
 
         const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const cleanForm = document.querySelector(".js-newTask");
 
-        if (newTaskContent === "") {
-            return;
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
+            cleanForm.value = "";
         }
-        addNewTask(newTaskContent);
+        cleanForm.focus();
     };
 
     const init = () => {
