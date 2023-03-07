@@ -1,5 +1,5 @@
 .section {
-    background-color: #ccc;
+    background-color: #ddd;;
     padding: 5px;
 }
 
@@ -8,12 +8,12 @@
     padding: 20px;
     margin-bottom: 1px;
     margin-top: auto;
-    font-weight: 600;
     font-size: larger;
 }
 
+
 .section__list {
     background-color: white;
-    margin: 0;
-    list-style: none;
+    margin: auto;
+    padding: 20px;
 }

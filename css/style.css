@@ -10,10 +10,9 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ccc;
+    background-color: #ddd;
     font-family: 'Montserrat';
     word-break: break-word;
-    display: grid;
 }
 
 .header__title {

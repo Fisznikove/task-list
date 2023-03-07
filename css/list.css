@@ -1,14 +1,18 @@
  .list__item {
     display: grid;
-    grid-template-columns: auto  1fr auto;
-    list-style: none;
-    border-bottom: 1px solid #ccc;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    grid-gap:10px;
+    border-bottom: 1px solid #ddd;;
+    padding: 10px;
+
  }
 
  .task__list {
-    list-style: none;
+
    
  }
 .task__list--done {
  text-decoration: line-through;
+ 
 }
