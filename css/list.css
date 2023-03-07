@@ -1,18 +1,15 @@
  .list__item {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    grid-gap:10px;
-    border-bottom: 1px solid #ddd;;
-    padding: 10px;
+     display: grid;
+     grid-template-columns: auto 1fr auto;
+     align-items: center;
+     grid-gap: 10px;
+     border-bottom: 1px solid #ddd;
+     ;
+     padding: 10px;
 
  }
 
- .task__list {
+ .task__list--done {
+     text-decoration: line-through;
 
-   
  }
-.task__list--done {
- text-decoration: line-through;
- 
-}

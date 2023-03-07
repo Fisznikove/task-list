@@ -10,25 +10,27 @@
 }
 
 .task__button {
-    background-color:green;
+    background-color: green;
     color: white;
     border: none;
     width: 30px;
     height: 30px;
 }
+
 .task__button:active {
-    border:solid black 1px;
+    border: solid black 1px;
     border-radius: 1px;
 }
+
 .task__button--remove {
     background-color: red;
     color: white;
     border: none;
     width: 30px;
     height: 30px;
-
 }
+
 .task__button--remove:active {
-    border:solid black 1px;
+    border: solid black 1px;
     border-radius: 1px;
 }
